@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Contexts\" />
-    <Folder Include="Implementations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleApp.Core\ConsoleApp.Core.csproj" />
   </ItemGroup>
 
 </Project>

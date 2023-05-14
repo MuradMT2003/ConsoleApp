@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleApp.Core.Interfaces;
 
-namespace ConsoleApp.DataAccess
+namespace ConsoleApp.DataAccess;
+
+public interface IRepository<T> where T : class,IEntity 
 {
-    internal interface IRepository
-    {
-    }
+    void Add(T entity);
+    void Update(T entity);
+    void Delete(T entity);
+    T? GetById(int id);
+    List<T>? GetAll();
+    T? GetByName(string name);
 }

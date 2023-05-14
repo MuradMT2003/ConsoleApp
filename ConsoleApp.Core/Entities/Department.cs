@@ -1,6 +1,8 @@
-﻿namespace ConsoleApp.Core.Entities;
+﻿using ConsoleApp.Core.Interfaces;
 
-public class Department
+namespace ConsoleApp.Core.Entities;
+
+public class Department:IEntity
 {
     static int _id;
     public int DepartmentId { get; }
@@ -13,10 +15,11 @@ public class Department
         _id++;
         
     }
-    public Department(string name,int employeeLimit):this()
+    public Department(string name,int employeeLimit,int companyId):this()
     {
         Name = name;
         EmployeeLimit = employeeLimit;
+        CompanyId = companyId;
     }
     
     public override string ToString()
