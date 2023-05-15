@@ -92,7 +92,7 @@ public class CompanyService : ICompanyService
         companyRepository.Delete(result);
     }
 
-    public void Update(int id, EmployeeDto employee)
+    public void Update(int id, CompanyDto employee)
     {
         if (id < 0)
         {

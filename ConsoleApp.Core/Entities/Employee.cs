@@ -3,7 +3,7 @@
 namespace ConsoleApp.Core.Entities;
 public class Employee:IEntity
 {
-    static int _id;
+    static int _id=1;
     public int EmployeeId { get; }
     public decimal Salary { get; set; }
     public string Name { get; set; }

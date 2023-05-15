@@ -4,7 +4,7 @@ namespace ConsoleApp.Core.Entities;
 
 public class Company:IEntity
 {
-    static int _id;
+    static int _id=1;
     public int CompanyId { get; }
     public string Name { get; set; }
     public Company()

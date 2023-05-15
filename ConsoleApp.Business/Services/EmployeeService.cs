@@ -34,7 +34,7 @@ public class EmployeeService : IEmployeeService
             throw new FormatException(Helper.errors["FormatException"]);
         }
         Employee emp = new Employee(employee.salary, employee.name, employee.surName, employee.departmentId);
-        if (!employeeRepository.GetAll().Contains(emp))
+        if (employeeRepository.GetAll().Contains(emp))
         {
             throw new AlreadyExistException(Helper.errors["AlreadyExistException"]);    
         }

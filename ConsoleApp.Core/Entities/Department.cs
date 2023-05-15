@@ -4,7 +4,7 @@ namespace ConsoleApp.Core.Entities;
 
 public class Department:IEntity
 {
-    static int _id;
+    static int _id=1;
     public int DepartmentId { get; }
     public string Name { get; set; }
     public int EmployeeLimit { get; set; }
