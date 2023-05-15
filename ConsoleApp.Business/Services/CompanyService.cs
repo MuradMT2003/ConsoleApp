@@ -103,6 +103,10 @@ public class CompanyService : ICompanyService
             throw new NullDataException(Helper.errors["NullDataException"]);
         }
         var res = new Company(employee.name);
+        if (companyRepository.GetById(id) == null)
+        {
+            throw new NullDataException(Helper.errors["NullDataException"]);
+        }
         companyRepository.Update(id, res);
 
     }

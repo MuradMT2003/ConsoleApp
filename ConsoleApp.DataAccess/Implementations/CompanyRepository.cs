@@ -33,10 +33,9 @@ public class CompanyRepository : IRepository<Company>
     public void Update(int id, Company entity)
     {
         var findedEntity= DbContext.companies.Find(p => p.CompanyId == id);
-        if(findedEntity != null)
-        {
+        
             findedEntity.Name = entity.Name;
-        }
+        
           
     }
 }

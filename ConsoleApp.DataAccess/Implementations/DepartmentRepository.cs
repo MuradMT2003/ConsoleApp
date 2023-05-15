@@ -33,11 +33,10 @@ public class DepartmentRepository : IRepository<Department>
     public void Update(int id,Department entity)
     {
         var findedEntity= DbContext.departments.Find(p=>p.DepartmentId==id);
-        if(findedEntity != null)
-        {
+        
             findedEntity.Name = entity.Name;
             findedEntity.EmployeeLimit = entity.EmployeeLimit;
             findedEntity.CompanyId = entity.CompanyId;
-        }
+        
     }
 }

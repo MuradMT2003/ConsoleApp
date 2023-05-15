@@ -106,6 +106,10 @@ public class EmployeeService : IEmployeeService
             throw new NullDataException(Helper.errors["NullDataException"]);
         }
         var res = new Employee(employee.salary, employee.name, employee.surName, employee.departmentId);
+        if (employeeRepository.GetById(id) == null)
+        {
+            throw new NullDataException(Helper.errors["NullDataException"]);
+        }
         employeeRepository.Update(id,res);
 
     }

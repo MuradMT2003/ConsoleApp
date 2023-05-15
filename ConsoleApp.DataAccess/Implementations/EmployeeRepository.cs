@@ -33,12 +33,11 @@ public class EmployeeRepository : IRepository<Employee>
     public void Update(int id,Employee entity)
     {
         var findedEntity = DbContext.employees.Find(x => x.EmployeeId == id);
-        if (findedEntity != null)
-        {
+        
             findedEntity.Name = entity.Name;
             findedEntity.SurName = entity.SurName;
             findedEntity.DepartmentId = entity.DepartmentId;
             findedEntity.Salary = entity.Salary;
-        }
+        
     }
 }
