@@ -30,9 +30,9 @@ public class EmployeeRepository : IRepository<Employee>
         return DbContext.employees.Find(x => x.Name == name);
     }
 
-    public void Update(Employee entity)
+    public void Update(int id,Employee entity)
     {
-        var findedEntity = DbContext.employees.Find(x => x.EmployeeId == entity.EmployeeId);
+        var findedEntity = DbContext.employees.Find(x => x.EmployeeId == id);
         if (findedEntity != null)
         {
             findedEntity.Name = entity.Name;

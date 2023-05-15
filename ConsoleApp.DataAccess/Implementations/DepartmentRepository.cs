@@ -30,9 +30,9 @@ public class DepartmentRepository : IRepository<Department>
         return DbContext.departments.Find(p=>p.Name==name);
     }
 
-    public void Update(Department entity)
+    public void Update(int id,Department entity)
     {
-        var findedEntity= DbContext.departments.Find(p=>p.DepartmentId==entity.DepartmentId);
+        var findedEntity= DbContext.departments.Find(p=>p.DepartmentId==id);
         if(findedEntity != null)
         {
             findedEntity.Name = entity.Name;

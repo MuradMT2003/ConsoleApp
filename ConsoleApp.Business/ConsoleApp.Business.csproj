@@ -8,9 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleApp.DataAccess\ConsoleApp.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

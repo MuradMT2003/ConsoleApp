@@ -9,7 +9,7 @@ public class Employee:IEntity
     public string Name { get; set; }
     public string SurName { get; set; }
     public int DepartmentId { get; set; }
-    public Employee(int salary, string name, string surname)
+    public Employee(decimal salary, string name, string surname)
     {
         EmployeeId = _id;
         _id++;
@@ -17,7 +17,7 @@ public class Employee:IEntity
         Name = name;
         SurName = surname;
     }
-    public Employee(int salary, string name, string surname,int departmentId):this(salary, name, surname)
+    public Employee(decimal salary, string name, string surname,int departmentId):this(salary, name, surname)
     {
         DepartmentId = departmentId;
     }
