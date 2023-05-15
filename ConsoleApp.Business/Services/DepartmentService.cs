@@ -114,6 +114,10 @@ public class DepartmentService : IDepartmentService
         {
             throw new NullDataException(Helper.errors["NullDataException"]);
         }
+        if (employeeRepository.GetAll().Count < department.employeeLimit)
+        {
+            throw new EmployeeLimitLackException(Helper.errors["EmployeeLimitLackException"]);
+        }
         var res = new Department(department.name, department.employeeLimit, department.companyId);
         departmentRepository.Update(id, res);
     }
